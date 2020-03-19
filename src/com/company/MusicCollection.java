@@ -97,4 +97,17 @@ public class MusicCollection {
         System.out.println("Invalid index.");
         return false;
     }
+
+    /**
+     * This method search list and find the song if don't find print appropriate massage.
+     * @param nameSong is the name of song that you wanna search and find it.
+     */
+    public void search (String nameSong){
+        for(Song song: songs)
+            if(song.getName().equals(nameSong)){
+                System.out.println("It's address: " + song.getAddress());
+                return;
+            }
+        System.out.println("There is no song with this name in the list.");
+    }
 }
